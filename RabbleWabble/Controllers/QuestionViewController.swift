@@ -6,7 +6,7 @@ protocol QuestionViewControllerDelegate: AnyObject {
 }
 
 class QuestionViewController: UIViewController {
-    weak var delegate: QuestionViewControllerDelegate?
+    public weak var delegate: QuestionViewControllerDelegate?
 
     public var questionIndex = 0
     public var correctCount = 0
@@ -32,7 +32,17 @@ class QuestionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupCancelButton()
         showQuestion()
+    }
+
+    private func setupCancelButton() {
+        let action = #selector(handleCancelPressed(sender:))
+        let image = UIImage(named: "ic_menu")
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: image,
+                                                           style: .plain,
+                                                           target: self,
+                                                           action: action)
     }
 
     private func showQuestion() {
@@ -45,6 +55,15 @@ class QuestionViewController: UIViewController {
         questionView.hintLabel.isHidden = true
 
         questionIndexItem.title = "\(questionIndex + 1)/\(questionGroup.questions.count)"
+    }
+
+    private func showNextQuestion() {
+        questionIndex += 1
+        guard questionIndex < questionGroup.questions.count else {
+            delegate?.questionViewController(self, didComplete: questionGroup)
+            return
+        }
+        showQuestion()
     }
 
     @IBAction func toggleAnswerLabels(_ sender: Any) {
@@ -62,14 +81,9 @@ class QuestionViewController: UIViewController {
         incorrectCount += 1
         questionView.incorrectCountLabel.text = "\(incorrectCount)"
         showNextQuestion()
-//        delegate?.questionViewController(self, didCancel: <#T##QuestionGroup#>, atIndex: <#T##Int#>)
     }
 
-    private func showNextQuestion() {
-        questionIndex += 1
-        guard questionIndex < questionGroup.questions.count else {
-            return
-        }
-        showQuestion()
+    @objc private func handleCancelPressed(sender: UIBarButtonItem) {
+        delegate?.questionViewController(self, didCancel: questionGroup, atIndex: questionIndex)
     }
 }
