@@ -17,9 +17,36 @@
 		D654CCDB2792116D00E80203 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D654CCDA2792116C00E80203 /* Assets.xcassets */; };
 		D654CCDD2792117600E80203 /* QuestionGroupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654CCDC2792117600E80203 /* QuestionGroupData.swift */; };
 		D654CCDF2795E64B00E80203 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654CCDE2795E64B00E80203 /* QuestionView.swift */; };
+		D656EE7127D9288000C56721 /* QuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D656EE7027D9288000C56721 /* QuestionStrategy.swift */; };
+		D656EE7927D9379200C56721 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D656EE7827D9379200C56721 /* NotificationService.swift */; };
+		D656EE7D27D9379200C56721 /* NotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D656EE7627D9379200C56721 /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D69F0A1E279751F000AA3E4D /* SelectQuestionGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69F0A1D279751F000AA3E4D /* SelectQuestionGroupViewController.swift */; };
 		D69F0A20279754BC00AA3E4D /* QuestionGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69F0A1F279754BC00AA3E4D /* QuestionGroupCell.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D656EE7B27D9379200C56721 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D654CCB02792001D00E80203 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D656EE7527D9379200C56721;
+			remoteInfo = NotificationService;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D656EE8127D9379200C56721 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D656EE7D27D9379200C56721 /* NotificationService.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D654CCB82792001D00E80203 /* RabbleWabble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RabbleWabble.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,12 +61,23 @@
 		D654CCDA2792116C00E80203 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D654CCDC2792117600E80203 /* QuestionGroupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionGroupData.swift; sourceTree = "<group>"; };
 		D654CCDE2795E64B00E80203 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		D656EE7027D9288000C56721 /* QuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionStrategy.swift; sourceTree = "<group>"; };
+		D656EE7627D9379200C56721 /* NotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D656EE7827D9379200C56721 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		D656EE7A27D9379200C56721 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D69F0A1D279751F000AA3E4D /* SelectQuestionGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectQuestionGroupViewController.swift; sourceTree = "<group>"; };
 		D69F0A1F279754BC00AA3E4D /* QuestionGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionGroupCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D654CCB52792001D00E80203 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D656EE7327D9379200C56721 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -53,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				D654CCBA2792001D00E80203 /* RabbleWabble */,
+				D656EE7727D9379200C56721 /* NotificationService */,
 				D654CCB92792001D00E80203 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				D654CCB82792001D00E80203 /* RabbleWabble.app */,
+				D656EE7627D9379200C56721 /* NotificationService.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +112,7 @@
 				D654CCCF2792085300E80203 /* Controllers */,
 				D654CCD12792086E00E80203 /* Models */,
 				D654CCD22792087E00E80203 /* Resources */,
+				D656EE6F27D9285700C56721 /* Strategies */,
 				D654CCD32792088800E80203 /* Views */,
 			);
 			path = RabbleWabble;
@@ -125,6 +166,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		D656EE6F27D9285700C56721 /* Strategies */ = {
+			isa = PBXGroup;
+			children = (
+				D656EE7027D9288000C56721 /* QuestionStrategy.swift */,
+			);
+			path = Strategies;
+			sourceTree = "<group>";
+		};
+		D656EE7727D9379200C56721 /* NotificationService */ = {
+			isa = PBXGroup;
+			children = (
+				D656EE7827D9379200C56721 /* NotificationService.swift */,
+				D656EE7A27D9379200C56721 /* Info.plist */,
+			);
+			path = NotificationService;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,15 +193,34 @@
 				D654CCB42792001D00E80203 /* Sources */,
 				D654CCB52792001D00E80203 /* Frameworks */,
 				D654CCB62792001D00E80203 /* Resources */,
+				D656EE8127D9379200C56721 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D656EE7C27D9379200C56721 /* PBXTargetDependency */,
 			);
 			name = RabbleWabble;
 			productName = RabbleWabble;
 			productReference = D654CCB82792001D00E80203 /* RabbleWabble.app */;
 			productType = "com.apple.product-type.application";
+		};
+		D656EE7527D9379200C56721 /* NotificationService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D656EE7E27D9379200C56721 /* Build configuration list for PBXNativeTarget "NotificationService" */;
+			buildPhases = (
+				D656EE7227D9379200C56721 /* Sources */,
+				D656EE7327D9379200C56721 /* Frameworks */,
+				D656EE7427D9379200C56721 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NotificationService;
+			productName = NotificationService;
+			productReference = D656EE7627D9379200C56721 /* NotificationService.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -156,6 +233,9 @@
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					D654CCB72792001D00E80203 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					D656EE7527D9379200C56721 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
@@ -174,6 +254,7 @@
 			projectRoot = "";
 			targets = (
 				D654CCB72792001D00E80203 /* RabbleWabble */,
+				D656EE7527D9379200C56721 /* NotificationService */,
 			);
 		};
 /* End PBXProject section */
@@ -186,6 +267,13 @@
 				D654CCD92792114B00E80203 /* LaunchScreen.storyboard in Resources */,
 				D654CCDB2792116D00E80203 /* Assets.xcassets in Resources */,
 				D654CCC32792001D00E80203 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D656EE7427D9379200C56721 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,13 +290,30 @@
 				D654CCDF2795E64B00E80203 /* QuestionView.swift in Sources */,
 				D654CCDD2792117600E80203 /* QuestionGroupData.swift in Sources */,
 				D69F0A20279754BC00AA3E4D /* QuestionGroupCell.swift in Sources */,
+				D656EE7127D9288000C56721 /* QuestionStrategy.swift in Sources */,
 				D654CCD727920ABD00E80203 /* QuestionGroup.swift in Sources */,
 				D69F0A1E279751F000AA3E4D /* SelectQuestionGroupViewController.swift in Sources */,
 				D654CCBE2792001D00E80203 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D656EE7227D9379200C56721 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D656EE7927D9379200C56721 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D656EE7C27D9379200C56721 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D656EE7527D9379200C56721 /* NotificationService */;
+			targetProxy = D656EE7B27D9379200C56721 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D654CCC12792001D00E80203 /* Main.storyboard */ = {
@@ -341,6 +446,7 @@
 		D654CCCD2792002200E80203 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -368,6 +474,7 @@
 		D654CCCE2792002200E80203 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -392,6 +499,54 @@
 			};
 			name = Release;
 		};
+		D656EE7F27D9379200C56721 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NotificationService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = stoneYourMarcos.RabbleWabble.NotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D656EE8027D9379200C56721 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NotificationService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = stoneYourMarcos.RabbleWabble.NotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -409,6 +564,15 @@
 			buildConfigurations = (
 				D654CCCD2792002200E80203 /* Debug */,
 				D654CCCE2792002200E80203 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D656EE7E27D9379200C56721 /* Build configuration list for PBXNativeTarget "NotificationService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D656EE7F27D9379200C56721 /* Debug */,
+				D656EE8027D9379200C56721 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
